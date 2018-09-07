@@ -2,17 +2,17 @@
 
 void singlePrint(string type, string authorOne, int authorOneId,int assignmentNumber, string assignmentTitle, string dueDate)
 {
-	int setTheWidth = 16;
-		cout << left
-			 << setfill ('*') << setw (80)
-			 << "*" << setfill(' ') << endl
-			 << setw(setTheWidth) << "* AUTHOR(S) "     << ": " << authorOne   << endl
-			 << setw(setTheWidth) << "* STUDENT IDS "   << ": " << authorOneId << endl;
-
-		if (type == "Lab")
-			cout << setw(setTheWidth) << "* Lab # "         << ": " << assignmentNumber << " - " << assignmentTitle << endl;
-		else
-			cout << setw(setTheWidth) << "* ASSIGNMENTS # " << ": " << assignmentNumber << " - " << assignmentTitle << endl;
+    int setTheWidth = 18;
+    cout << left
+         << setfill ('*') << setw (80)
+         << "*" << setfill(' ') << endl
+         << setw(setTheWidth) << "* AUTHOR(S) "     << ": " << authorOne   << endl
+         << setw(setTheWidth) << "* STUDENT IDS "   << ": " << authorOneId << endl;
+    
+    if (type == "Lab")
+        cout << setw(setTheWidth) << "* Lab # "         << ": " << assignmentNumber << " - " << assignmentTitle << endl;
+    else
+        cout << setw(setTheWidth-2) << "* ASSIGNMENTS # " << assignmentNumber <<  " : " << assignmentTitle << endl;
 
 
 		cout	 << setw(setTheWidth) << "* CLASS "         << ": " << "CS1D" << endl
